@@ -1,0 +1,13 @@
+473ba9163da07e2f6928b2b932b370298a435143 adding link to github repo
+84d778e183a04ca31f44c6b771f768e486a1ab0f modify readme
+62789794bf95a61989b951444d5415a0a2c6a134 adding readme
+fb197506512cca01befbc13cc303aa40b7693692 adding a page with a ton of filler videos
+2e709fcd97682d81ff6f91c3289df703194368f2 populating one of the pages with a lot of images
+96b62e2dfe71476130032d9e9c0576de34d8397c adding filler text on anotehr page
+d1cefe03de43b3ba3cc5a9b579da5a3f27eca0bb adding table/data section to page
+ca1d7bbb2d4509266ae424bbfcf4cbe9864af89a adding media section and adding an image
+87d6883683a9b43e4965f2690df816de07faa485 adding youtube video and adding a link to cite my source
+5be01203e9e131080032e6d01f01b74ba8438991 adding a nice bunch of text about cats from wikipedia
+174c1e1c453a21c0880f20f609846038515462e8 adding sectioning into sections and stuff
+8538555bbcc285af38c7806f987e0b14625f6f35 adding website pages and list navigation
+
