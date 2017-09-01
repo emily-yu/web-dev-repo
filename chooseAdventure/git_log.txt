@@ -1,0 +1,141 @@
+  501  ls
+  502  cd desktop
+  503  ls
+  504  cd web
+  505  cd web-dev-repos/
+  506  ls
+  507  mkdir chooseAdventure
+  508  ls
+  509  cd chooseAdventure/
+  510  touch index.html
+  511  touch page1.html
+  512  touch page2.html
+  513  touch page3.html
+  514  touch page4.html
+  515  touch page5.html
+  516  ls
+  517  cd ..
+  518  ls
+  519  git add .
+  520  git commit -m "chooseAdventure: init all pages"
+  521  git push
+  522  git checkout -b "home"
+  523  ls
+  524  git add .
+  525  touch end.html
+  526  git commit -m "chooseAdventure: add home & ending page"
+  527  git push
+  528  ls
+  529  rm end.html
+  530  cd chooseAdventure/
+  531  touch end.html
+  532  ls
+  533  cd ..
+  534  ls
+  535  git add .
+  536  git commit --amend "chooseAdventure: add home and ending page"
+  537  git commit -m "fix end"
+  538  git push -u origin home
+  539  ls
+  540  git checkout master
+  541  ls
+  542  git merge home
+  543  ls
+  544  git checkout -b page2
+  545  git status
+  546  git add .
+  547  git commit -m "chooseAdventure: add content page1"
+  548  git push -u origin page2
+  549  git checkout master
+  550  git push
+  551  git status
+  552  git merge page2
+  553  git checkout -b end
+  554  git add .
+  555  git commit -m "chooseAdventure: add ending page"
+  556  git push -u origin end
+  557  git checkout master
+  558  ls
+  559  git push
+  560  git merge end
+  561  git checkout page2
+  562  git add .
+  563  git commit -m "chooseAdventure: page2"
+  564  git push -u origin page2
+  565  git checkout master
+  566  git push
+  567  git merge end
+  568  git merge page2
+  569  git status
+  570  git push
+  571  git status
+  572  git checkout -b page3&4
+  573  git add .
+  574  git commit -m "chooseAdventure: adding page3 and page4"
+  575  git push -u origin page3
+  576  git checkout master
+  577  ls
+  578  git merge page3
+  579  ls
+  580  git status
+  581  git push
+  582  git branch -b pages5_6
+  583  git checkout -b page5_6
+  584  cd chooseAdventure/
+  585  touch page6.html
+  586  git status
+  587  git add .
+  588  git commit -m "chooseAdventure: add page5 content and create page6"
+  589  git push -u origin page5_
+  590  git push -u origin page5_6
+  591  git status
+  592  git add .
+  593  git commit -m "chooseAdventure: add page6 content"
+  594  git push -u origin page5_6
+  595  git checkout master
+  596  ls
+  597  git merge page5_6
+  598  git push
+  599  git checkout -b lastpage
+  600  ls
+  601  touch page7.html
+  602  git add .
+  603  git commit -m "chooseAdventure: create content and page for page7"
+  604  git push -u origin lastpage
+  605  git checkout master
+  606  ls
+  607  git merge page7
+  608  git status
+  609  git merge lastpage
+  610  git push
+  611  git push origin --delete lastpage
+  612  git branch -D lastpage
+  613  git push origin --delete page5_6
+  614  git branch -D page5_6
+  615  git push origin --delete page3
+  616  git push origin --delete page2
+  617  git branch -D page3
+  618  git branch -D page2
+  619  git push origin --delete end
+  620  git push origin --delete home
+  621  git push origin --delete sectioning
+  622  git branch -D end
+  623  git branch -D home
+  624  git branch -D sectioning
+  625  git checkout -b image_video
+  626  ls
+  627  git add .
+  628  git commit -m "chooseAdventure: adding images and videos to all pages"
+  629  git push -u origin image_video
+  630  git push origin --delete image_video
+  631  git branch -D image_video
+  632  git checkout master
+  633  git merge image_video
+  634  git push
+  635  git branch -D image_video
+  636  ls
+  637  git add .
+  638  git commit -m "adding github link"
+  639  git commit --amend
+  640  git push -u origin -f
+  641  history
