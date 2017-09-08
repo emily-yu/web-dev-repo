@@ -1,0 +1,33 @@
+.red {
+	background-color: red;
+}
+.orange {
+	background-color: orange;
+}
+.yellow {
+	background-color: yellow;
+}
+.green {
+	background-color: green;
+}
+.darkGreen {
+	background-color: #228B22;
+}
+.lightBlue {
+	background-color: #add8e6;
+}
+.blue {
+	background-color: blue;
+}
+.violet {
+	background-color: #9932CC;
+}
+
+div {
+	height: 69px;
+}
+p {
+	color: white;
+	text-align: center;
+	padding-top: 30px;
+}
