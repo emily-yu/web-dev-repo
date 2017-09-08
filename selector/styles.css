@@ -1,0 +1,27 @@
+p, h1, li {
+	font-family: 'Helvetica', sans-serif;
+}
+
+p {
+	background-color: lightgray;
+}
+
+.red {
+	color: red;
+	font-size: 1.5em;
+}
+
+li {
+	color: green;
+	font-family: 'Dosis', sans-serif;
+}
+
+.box {
+	width: 200px;
+	height: 200px;
+	background-color: green;
+}
+
+ul {
+	background: #E6E6FA;
+}
