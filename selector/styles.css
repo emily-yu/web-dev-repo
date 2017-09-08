@@ -11,9 +11,14 @@ p {
 	font-size: 1.5em;
 }
 
+#green {
+	color: green;
+}
+
 li {
 	color: green;
 	font-family: 'Dosis', sans-serif;
+	text-transform: uppercase;
 }
 
 .box {
@@ -24,4 +29,8 @@ li {
 
 ul {
 	background: #E6E6FA;
+}
+
+.bold > p {
+	text-decoration: underline;
 }
