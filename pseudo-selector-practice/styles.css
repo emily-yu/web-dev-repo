@@ -1,0 +1,19 @@
+p:hover {
+	color: red;
+}
+
+h1:hover{
+	color: orange;
+}
+
+a:link {
+	color: green !important;
+	text-decoration: none;
+}
+a:visited {
+	color: yellow;
+}
+a:active {
+	font-size: 50px;
+	text-decoration: underline;
+}
