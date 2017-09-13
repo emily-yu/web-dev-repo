@@ -1,0 +1,37 @@
+.header {
+	background-color: lightblue;
+	width: 400px;
+	text-align: center;
+	margin: 0 auto;
+	padding: 20px;
+	margin-top: 40px;
+}
+
+.header > h1 {
+	color: white;
+	font-size: 40px;
+}
+
+.navbar-content {
+	display: flex;
+	width: 100%;
+	align-items: center;
+    justify-content: center;
+}
+
+.navbar-content > p {
+	text-align: center;
+	margin: 20px;
+}
+
+.navbar-content > p:hover {
+	color: green;
+}
+
+.image > .imagebox {
+	text-align: center
+}
+
+.footer {
+	text-align: center
+}
