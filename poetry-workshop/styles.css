@@ -1,0 +1,82 @@
+body {
+	font-family: sans-serif;
+	background-color: #f9f8f8;
+}
+
+
+/* table */
+.title {
+	background-color: #96b3d2;
+	border-bottom: 3px solid #7d93ac;
+	color: white;
+	height: 30px;
+}
+.content {
+	background-color: lightblue;
+}
+table {
+	border-collapse: collapse;
+	margin-bottom: 40px;
+	margin-top: 30px;
+}
+
+td {
+	border: 1px solid #b2b2b2;
+	padding: 10px;
+}
+
+
+/* form */
+.form {
+	border: 1px #e5e5e5 solid;
+	background-color: white;
+	padding: 20px 16px 0px 13px;
+	width: 400px;
+	margin-bottom: 40px;
+}
+.form > h4 {
+	margin-top: -28px;
+	font-style: italic;
+	font-weight: normal;
+}
+.form > form > input {
+	margin-bottom : 5px;
+	font-size: 12px;
+}
+form > input[name="firstname"] {
+	margin-left: 75px;
+}
+form > input[name="lastname"] {
+	margin-left: 77px;
+}
+
+.dropdown {
+	display: flex;
+}
+
+.dropdown > select {
+	margin-top: 16px;
+	margin-left: 21px;
+}
+
+button {
+	background: green;
+	float: right;
+	margin-top: 20px;
+	margin-bottom: 50px;
+	border-radius: 6px;
+	color: white;
+}
+input {
+	margin-left: 73px;
+}
+
+.options {
+	display: flex
+}
+.options > p {
+	margin: 0px 11px 12px 0px;
+}
+.options > input {
+	margin-left: 11px;
+}
