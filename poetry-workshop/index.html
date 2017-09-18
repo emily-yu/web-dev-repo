@@ -7,6 +7,7 @@
 <body>
 
 <!-- https://github.com/emily-yu/web-dev-repo/tree/master/poetry-workshop -->
+
 <section class = "header">
 	<h1>Poetry Workshops</h1>
 	<p>We will conduct poetry workshops throughout the year</p>
@@ -53,31 +54,35 @@
 </table>
 </section>
 
+<h4>Register your interest</h4>
 <section class = "form">
-	<h4>Register your interest</h4>
 	<form action = "https://google.com" method = "post">
 		Your name:
 		<input type="text" name="firstname"><br>
+		<hr class = "blank">
 		Your email:
 		<input type="text" name="lastname">
+		<!-- </form> -->
+		<hr class = "blank">
+
+		<div class = "flex">
+			<p>Your closest center:</p>
+			<select>
+				<option value="ny">New York</option>
+				<option value="chicago">Chicago</option>
+				<option value="sf">SF</option>
+			</select>
+		</div>
+		<hr class = "blank">
+		<div class = "flex">
+			<p>Are you a member?</p>
+			<input type = "radio" name ="q1" value = "y">Yes
+			<input type = "radio" name ="q1" value = "n">No
+		</div>
+
+		<input type="submit" value="Submit">
 	</form>
 
-	<div class = "dropdown">
-		<p>Your closest center:</p>
-		<select>
-			<option value="ny">New York</option>
-			<option value="chicago">Chicago</option>
-			<option value="sf">SF</option>
-		</select>
-	</div>
-
-	<div class = "options">
-		<p>Are you a member?</p>
-		<input type = "radio" name ="q1" value = "y">Yes
-		<input type = "radio" name ="q1" value = "n">No
-	</div>
-
-	<button>Register</button>
 
 </section>
 
