@@ -11,6 +11,14 @@ body {
 	color: white;
 	height: 30px;
 }
+
+.rounded-top-right {
+	border-top-right-radius: 10px;
+}
+.rounded-top-left {
+	border-top-left-radius: 10px;
+}
+
 .content {
 	background-color: lightblue;
 }
