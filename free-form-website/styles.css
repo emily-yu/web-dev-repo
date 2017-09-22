@@ -29,6 +29,7 @@ p, h1, h3, a {
 .navbar-content > a {
 	text-align: center;
 	margin: 20px;
+	text-decoration: none;
 }
 
 .navbar-content > p:hover {
@@ -112,4 +113,9 @@ p, h1, h3, a {
 
 footer {
 	text-align: center;
+}
+
+body {
+	padding: 0;
+	margin: 0;
 }
