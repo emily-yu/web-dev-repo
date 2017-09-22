@@ -56,7 +56,7 @@ p, h1, h3, a {
 .header-content {
 	padding:200px 15px;
 }
-.header-content > h1 {
+.header-content > a > .header-text {
 	font-size: 40px;
 }
 
