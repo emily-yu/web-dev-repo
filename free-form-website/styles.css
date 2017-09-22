@@ -75,6 +75,10 @@ p, h1, h3 {
 	padding: 25px 100px;
 	background-color: grey
 }
+.dark-content > h1 {
+	color: white;
+}
+
 .light-content {
 	padding: 25px 100px;
 	background-color: white
