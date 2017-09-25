@@ -13,15 +13,25 @@ p, h1, h3, a {
 	margin: 0;
 }
 .logo {
-	padding-left: 100px;
-	padding: 10px;
-	/*width: 50%;*/
-	align-items: center;
+	display: flex;
+/*	padding-left: 100px;
+	padding: 10px;*/
+	width: 50%;
+	/*align-items: center;*/
     justify-content: left;
+}
+.logo > a {
+	text-align: center;
+	margin-top: 11px;
+	margin-left: 30px;
+	margin-bottom: -30px;
+	text-decoration: none;
+	font-family: 'Wendy One', sans-serif;
+	font-size: 30px;
 }
 .navbar-content {
 	display: flex;
-	/*width: 50%;*/
+	width: 50%;
 	align-items: center;
     justify-content: center;
 }
@@ -29,6 +39,7 @@ p, h1, h3, a {
 .navbar-content > a {
 	text-align: center;
 	margin: 20px;
+	margin-bottom: 0;
 	text-decoration: none;
 }
 
@@ -98,6 +109,7 @@ p, h1, h3, a {
 	padding: 10px;
 }
 .content-half > img {
+	margin-top: 22px;
 	margin-left: 50px;
 	width: 100%;
 }
