@@ -72,14 +72,21 @@ p, h1, h3, a {
 }
 
 .header-button {
+	display: inline-flex;
 	border:none;
-	/*border-radius:300px;*/
 	font-weight:700;
 	color: white;
+	background-color: green;
+	width: 164px;
 	font-size: 16px;
 	text-transform: uppercase;
 	padding:15px 45px 15px 45px;
 	margin-top: 20px;
+	border-radius: 5px;
+}
+.header-button > a {
+	color: white;
+	text-decoration: none;
 }
 
 
