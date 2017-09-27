@@ -89,7 +89,6 @@ p, h1, h3, a {
 	text-decoration: none;
 }
 
-
 .dark-content {
 	padding: 25px 100px;
 	background-color: grey
@@ -105,6 +104,10 @@ p, h1, h3, a {
 }
 .light-content > h1 {
 	text-align: center
+}
+
+.lightweight-footer {
+	margin: -10;
 }
 
 .container {
@@ -137,4 +140,58 @@ footer {
 body {
 	padding: 0;
 	margin: 0;
+}
+
+form {
+	font-family: sans-serif;
+}
+
+hr {
+	border: 1px solid grey;
+	margin-bottom: 1px;
+}
+
+.formContainer {
+	padding-left: 20%;
+}
+.form > form > input {
+	margin-bottom : -35px;
+	font-size: 12px;
+}
+input[type="text"]{
+	float: right;
+}
+input[type="date"] {
+	margin-left: 75px;
+	float: right;
+}
+input[name="lastname"] {
+	margin-left: 77px;
+}
+input[type="submit"] {
+	background: green;
+	float: right;
+	margin-top: 20px;
+	margin-bottom: 50px;
+	border-radius: 6px;
+	color: white;
+}
+
+form {
+	width: 60%;
+}
+.form > p {
+	display: flex;
+	color: white;
+}
+
+.flex {
+	display: flex;
+}
+.flex > p {
+	margin: 0px 11px 6px 0px;
+}
+
+.main {
+	font-size: 30px;
 }
