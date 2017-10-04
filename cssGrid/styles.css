@@ -1,7 +1,7 @@
 .wrapper {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
-   grid-template-rows: repeat(3, 100px);
+   grid-template-rows: 100px 300px 300px;
 }
 .wrapper > div {
 	border: solid 1px black;
