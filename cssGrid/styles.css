@@ -3,9 +3,42 @@
    grid-template-columns: repeat(3, 1fr);
    grid-template-rows: repeat(3, 100px);
 }
-div {
+.wrapper > div {
 	border: solid 1px black;
 }
+
+/*colors*/
+.top1 {
+	background-color: red;
+}
+.top2 {
+	background-color: yellow;
+}
+.a7 {
+	background-color: white;
+}
+.a5 {
+	background-color: #42b360;
+}
+.a11 {
+	background-color: orange;
+}
+.a8 {
+	background-color: black;
+}
+.b9 {
+	background-color: cyan;
+}
+.b10 {
+	background-color: magenta;
+}
+.b1 > .b5 {
+	background-color: blue;
+}
+.b1 > .b7 {
+	background-color: purple;
+}
+
 .a4 {
 	grid-template-areas: "a b" "a b";
     display: grid;
@@ -25,6 +58,7 @@ div {
 	display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column: 2/2;
+    border: 1px solid black;
 }
 .b5 {
 	/*grid-template-areas: "c d" "c d";*/
@@ -35,22 +69,29 @@ div {
 .b5 > .b1 {
 	/*grid-area: c;*/
 	display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-column: 1/2;
+    border: 1px solid black;
 }
 .b5 > .b2 {
 	/*grid-area: d;*/
 	display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column: 2/2;
+    border: 1px solid black;
 }
 .b1 {
 	grid-template-rows: repeat(3, 1fr);
 }
 .b1 > .b6 {
 	    grid-row: 2/1;
-    grid-column: 1/3;
+    grid-column: 1/4;
+
 }
+.a1 {
+	border: 1px solid black;
+}
+
 .wrapper > * {
   border: 1px dashed red; /* demo only */
 }
