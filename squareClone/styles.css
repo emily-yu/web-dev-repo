@@ -8,7 +8,7 @@
 	height: calc(100vh - 20px);
 }
 .wrapper > div {
-	border: solid 1px black;
+	/*border: solid 1px black;*/
 }
 .section1, .section2, .section3, .section4 {
 	grid-column: 1/4;
@@ -232,6 +232,9 @@
 	background-color: #191f22;
 }
 
+a {
+	text-decoration: none;
+}
 /* DEMO PURPOSES */
 div {
 	/*border: 1px dashed red*/
