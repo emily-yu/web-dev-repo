@@ -1,0 +1,56 @@
+/* preformatting */
+.wrapper {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+	margin: 0;
+}
+.wrapper > div {
+	border: solid 1px black;
+}
+.section1, .section2, .section3, .section4 {
+	grid-column: 1/4;
+	padding: 10%;
+}
+
+/* section 1 */
+.section1 {
+	grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    text-align: center
+}
+.section1 > .singular {
+	grid-column: 2/3;
+}
+
+/* section 2 */
+.section2 {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+}
+.section2 > .fullColumn {
+	grid-area: 2 span;
+}
+.section2 > .singular {
+	grid-column: 1/2 span;
+}
+.section2 > .halfGrid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+/* section 4 */
+.section4 {
+	grid-template-columns: repeat(4, 1fr);
+    display: grid;
+    text-align: center
+}
+.section4 > .singular {
+	grid-area: 2/4 span;
+}
+
+/* demo purposes */
+div {
+	border: 1px dashed red
+}
