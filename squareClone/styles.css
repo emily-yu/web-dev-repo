@@ -53,9 +53,6 @@
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 }
-/*.section4 > .singular > p {
-	margin: 0;
-}*/
 .section4 > .singular > .icons {
 	text-align: right;
 }
@@ -68,6 +65,40 @@
 }
 .section4 > .ordinaryFlex > p {
 	margin: 0;
+}
+
+/* text formatting */
+/* sizing */
+.large-text {
+
+}
+.medium-text {
+
+}
+.small-text {
+
+}
+.mini-text {
+
+}
+
+/* text-transforming */
+.capital {
+
+}
+
+/* colors */
+.orange {
+
+}
+.green {
+
+}
+.aqua {
+
+}
+.gray {
+
 }
 
 /* demo purposes */
