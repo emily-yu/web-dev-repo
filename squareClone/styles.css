@@ -15,12 +15,12 @@
 
 /* section 1 */
 .section1 {
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(4, 1fr);
     display: grid;
     text-align: center
 }
 .section1 > .singular {
-	grid-column: 2/3;
+	grid-column: 2/4;
 }
 
 /* section 2 */
