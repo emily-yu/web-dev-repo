@@ -39,17 +39,28 @@
 	height: 300px;
 	padding: 50px;
 	background-color: white;
-	border: solid 1px #e0e0e0;
+	border: solid 2px #e0e0e0;
+	transition: border-color 0.3s;
+	border-radius: 2px;
 }
+
 .section1 > .mail > img {
 	padding-bottom: 32px;
 }
 .section1 > .calender2 > img {
 	padding-bottom: 5px;
 }
-.section1 > .calender1: hover {
+.section1 > .mail:hover {
+	border-color: #eba914;
 }
-.section1 > .snowflake: hover {
+.section1 > .calender1:hover {
+	border-color: #8ab715;
+}
+.section1 > .calender2:hover {
+	border-color: #8ab715;
+}
+.section1 > .snowflake:hover {
+	border-color: #35bea4;
 }
 
 /* section 2 */
