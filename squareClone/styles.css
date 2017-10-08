@@ -22,6 +22,9 @@
 .section1 > .singular {
 	grid-column: 2/4;
 }
+.section1 > .banner {
+	grid-column: 1/5;
+}
 
 /* section 2 */
 .section2 {
@@ -44,10 +47,27 @@
 .section4 {
 	grid-template-columns: repeat(4, 1fr);
     display: grid;
-    text-align: center
 }
 .section4 > .singular {
 	grid-area: 2/4 span;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+/*.section4 > .singular > p {
+	margin: 0;
+}*/
+.section4 > .singular > .icons {
+	text-align: right;
+}
+.section4 > .singular > .hr {
+	grid-column: 1/9;
+}
+.section4 > .ordinaryFlex {
+	display: flex;
+	grid-column: 1/4;
+}
+.section4 > .ordinaryFlex > p {
+	margin: 0;
 }
 
 /* demo purposes */
