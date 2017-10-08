@@ -18,13 +18,35 @@
 .section1 {
 	grid-template-columns: repeat(4, 1fr);
     display: grid;
-    text-align: center
+    text-align: center;
+    grid-column-gap: 30px;
+    grid-auto-rows: 270px;
+    align-items: center;
 }
 .section1 > .singular {
 	grid-column: 2/4;
 }
 .section1 > .banner {
 	grid-column: 1/5;
+}
+.section1 > div > .icons {
+	width: 100px
+}
+.section1 > .reason {
+	height: 300px;
+	padding: 50px;
+	background-color: white;
+	border: solid 1px #e0e0e0;
+}
+.section1 > .mail > img {
+	padding-bottom: 32px;
+}
+.section1 > .calender2 > img {
+	padding-bottom: 5px;
+}
+.section1 > .calender1: hover {
+}
+.section1 > .snowflake: hover {
 }
 
 /* section 2 */
@@ -133,7 +155,7 @@ a {
     text-align: center;
     width: 228px;
     height: 46px;
-    line-height: 0px;
+    line-height: 20px;
     border-radius: 5px;
 }
 
@@ -153,6 +175,17 @@ a {
 .four {
 	height: 100%;
 	width: 100%;
+}
+
+/* BACKGROUND COLORS */
+.off-white-background {
+	background-color: #f9f9f9;
+}
+.white-background {
+	background-color: white;
+}
+.black-background {
+	background-color: #191f22;
 }
 
 /* DEMO PURPOSES */
