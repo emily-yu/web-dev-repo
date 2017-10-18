@@ -236,16 +236,48 @@ a {
 	text-decoration: none;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 300px) {
 	.section1 {
 		/*background-color: yellow;*/
+		display: block;
+		padding: 10% 10% 28% 10%;
+	}
+	.reason {
+		height: 350;
+	}
+	.mail, .calender1, .calender2 {
+		/*margin-bottom: 20px;*/
+	}
+	.section2 {
+		display: block;
+		padding: 8% 10% 231% 10%;
+	}
+
+	.section2 > .fullColumn {
+		    width: 422px;
+    height: 450;
+	}
+	.section2 > .singular {
+		margin-top: 100%
+	}
+	.section2 > .halfGrid {
+		    height: 350;
+   		 width: 440px;
+   		display: block;
+	}
+	.abcdefg {
+		width: 405px;
+	}
+	.section2 > .b6 {
+		height: 300;
 	}
 }
 @media (min-width: 550px) {
 	.section1 {
 		/*background-color: blue;*/
+		display: grid;
 		grid-template-columns: repeat(1, 1fr);
-		padding: 5% 13% 11% 13%;
+		padding: 5% 13% 11% 7%;
 		    grid-auto-rows: 350px;
 	}
 		.wrapper {
@@ -292,6 +324,8 @@ a {
 	.section2 {
 		height: 650px;
 		grid-row-gap: 0;
+		display: grid;
+		padding: 8% 10% 10% 10%;;
 	}
 		.section2 > .singular {
 		grid-row: 3;
@@ -299,14 +333,38 @@ a {
 	.fullColumn {
 		    height: 387px;
 	}
-	.b6 {
-		height: 200;
-	}
 /*	.b6 > img {
 		height: 200;
 	}*/
-	.halfGrid {
+/*	.section2 > .halfGrid {
 		height: 170;
+		display: grid;
+	}
+*/
+
+
+
+		.section2 > .fullColumn {
+width: 350;
+    height: 367px;
+	}
+	.section2 > .singular {
+		margin-top: 0%
+	}
+	.section2 > .halfGrid {
+		    height: 150;
+   		 width: 300px;
+   		display: grid;
+	}
+	.abcdefg {
+		    width: 150px;
+	}
+	.hijklmnop {
+		    width: 150px;
+	}
+	.section2 > .b6 {
+		 height: 200;
+    	width: 300;
 	}
 }
 @media (min-width:990px){
@@ -409,14 +467,14 @@ a {
 		width: 256px;
 	}
 
-	
+
 	/* section 2 */
 	.section2 {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: repeat(3, 1fr);
 		grid-row-gap: 0px;
-		padding: 8% 10% 0% 10%;
+		padding: 8% 10% 10% 10%
 	    height: 800px;
 	}
 	.section2 > .fullColumn {
@@ -436,8 +494,35 @@ a {
 	.section2 > .singular {
 		grid-row: 3;
 	}
-	.b6 {
+	.section2 > .b6 {
 		height: 250;
+	}
+	.section2 > .halfGrid {
+		display: grid;
+	}
+
+
+		.section2 > .fullColumn {
+    height: 500px;
+    width: 500px;
+	}
+	.section2 > .singular {
+		margin-top: 5%
+	}
+	.section2 > .halfGrid {
+    width: 500px;
+    height: 245px;
+   		display: grid;
+	}
+	.abcdefg {
+		    width: 250px;
+	}
+	.hijklmnop {
+		    width: 250px;
+	}
+	.section2 > .b6 {
+    height: 250px;
+    width: 500px;
 	}
 
 
