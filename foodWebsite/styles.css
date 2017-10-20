@@ -1,0 +1,79 @@
+/* Header*/
+body {
+	margin: 0;
+	font-family: sans-serif;
+}
+/*http://www.seriouseats.com/images/2014/10/20141014-chicken-feet-robyn-lee.jpg*/
+/*https://mtc1-dydfxmh.netdna-ssl.com/wp-content/uploads/2015/06/SAM_2667-1300x866.jpg*/
+.first{
+	background-image: linear-gradient(rgba(27, 122, 20, 0.8), rgba(27, 122, 20, 0.8)),url('http://www.dealsextra.com.au/directory-images/45909bec69f3b3c3da19063a38df3450.jpg') !important;
+	background-size: 200px;
+	position:relative;
+	width:100%;
+	height: 450px;
+	text-align:center;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+    padding-top: 200px;
+    margin: auto;
+}
+.second {
+	background-image: linear-gradient(rgba(27, 122, 20, 0.8), rgba(27, 122, 20, 0.8)),url('http://www.seriouseats.com/images/2014/10/20141014-chicken-feet-robyn-lee.jpg') !important;
+	background-size: 200px;
+	position:relative;
+	width:100%;
+	height: 450px;
+	text-align:center;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+    padding-top: 200px;
+    margin: auto;
+}
+.third {
+	background-image: linear-gradient(rgba(27, 122, 20, 0.8), rgba(27, 122, 20, 0.8)),url('https://mtc1-dydfxmh.netdna-ssl.com/wp-content/uploads/2015/06/SAM_2667-1300x866.jpg') !important;
+	background-size: 200px;
+	position:relative;
+	width:100%;
+	height: 450px;
+	text-align:center;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+    padding-top: 200px;
+    margin: auto;
+}
+.parallax > .content {
+	  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.parallax > .content > p {
+}
+.parallax > div {
+	text-align: center;
+	color: white;
+	font-size: 20px;
+	height: 200px;
+	width: 500px;
+	border: 4px solid white;
+}
+
+.normal {
+	text-align: center;
+	padding: 5%;
+}
