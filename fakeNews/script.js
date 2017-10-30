@@ -7,16 +7,17 @@ if (window.location.href  === "http://www.npr.org/") {
 		if (!(titles[i].classList.contains("hp-item")) || 
 			titles[i].classList.contains("attachment")
 			) {
-			console.log("filter")
+			// console.log("filter")
 		}
 		else {
-			console.log(titles[i])
+			// console.log(titles[i])
 			storyTitles.push(titles[i]);
 		}
 	}
 
 	// change images + subtitles + titles
-	console.log(storyTitles)
+	// console.log("FUCK YOU")
+	// console.log(storyTitles)
 	for (var i = 0; i < storyTitles.length; i++) {
 		var pageTitle = storyTitles[i].getElementsByClassName("title");
 		pageTitle[0].textContent = "same" + i;
@@ -30,11 +31,15 @@ if (window.location.href  === "http://www.npr.org/") {
 			document.getElementById("globalheader").innerHTML = "eventlistenr1"
 		});
 
-		var image = storyTitles[i].getElementsByClassName("img");
-		console.log(image)
+		var image = document.getElementsByClassName("img");
+		// console.log(image)
+		// console.log(image)
 
-		if (typeof image[0].src !== "undefined") {
-			image[0].src = "https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg"
+		// if (typeof image.src !== "undefined") {
+		for (let i in image) {
+			console.log(i)
+			image[i].src = "https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg"
 		}
+		// }
 	}
 }
