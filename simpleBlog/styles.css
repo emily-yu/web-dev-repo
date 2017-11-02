@@ -1,0 +1,22 @@
+body {
+	font-family: sans-serif;
+	margin: 0;
+}
+.blogPost {
+	padding: 5%;
+}
+.header {
+	background-color: rgba(58, 97, 120, 0.4);
+	text-align: center;
+	padding: 5%;
+}
+.button {
+	padding-left: 55px;
+    padding-right: 52px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 10px;
+}
+.title {
+	font-size: 25px;
+}
