@@ -33,11 +33,19 @@
 </body>
 
 <script type="text/javascript">
+	idArray = ["0"]
 	function createSection() {
 		var div = document.getElementById('post');
 		let input = document.getElementById('input');
 		let subtitle = document.getElementById('subinput');
-		div.innerHTML += '<hr><div class = "blogPost"><h3>' + input.value + '</h3><p>' + subtitle.value + '</p><br></div>';
+		div.innerHTML += '<div class = "blogPost"><h3>' + input.value + '</h3><p>' + subtitle.value + '</p><br><button class = "button" onclick = "deleteSection(this)" id = "' + idArray.length + '">Delete</button></div>';
+	}
+	function deleteSection(sender) {
+		console.log(idArray)
+		idArray.splice(idArray.indexOf(sender.getAttribute('id')), 1)
+		console.log(sender.parentNode)
+		sender.parentNode.parentNode.removeChild(sender.parentNode)
+        console.log(sender.getAttribute('id'));
 	}
 </script>
 
