@@ -31,7 +31,8 @@ for (let element of allElements) {
 
 console.log("asdfadsf")
 for (let element of postElements) {
-	element.style.display = "inline"
+	element.style.display = "block"
+	element.style.margin = '5%'
 }
 for (let element of aboutMeElements) {
 	element.style.display = "none"
@@ -39,12 +40,14 @@ for (let element of aboutMeElements) {
 for (let element of randomElements) {
 	element.style.display = "none"
 }
-	
+document.getElementById("header").style.margin = "0 auto"
+
 let home = document.getElementById("home")
 home.addEventListener("click", function() {
 	console.log("asdfadsf")
 	for (let element of postElements) {
-		element.style.display = "inline"
+		element.style.display = "block"
+		element.style.margin = '5%'
 	}
 	for (let element of aboutMeElements) {
 		element.style.display = "none"
@@ -61,7 +64,8 @@ aboutme.addEventListener("click", function() {
 		element.style.display = "none"
 	}
 	for (let element of aboutMeElements) {
-		element.style.display = "inline"
+		element.style.display = "block"
+		element.style.margin = '5%'
 	}
 	for (let element of randomElements) {
 		element.style.display = "none"
@@ -79,7 +83,8 @@ random.addEventListener("click", function() {
 		element.style.display = "none"
 	}
 	for (let element of randomElements) {
-		element.style.display = "inline"
+		element.style.display = "block"
+		element.style.margin = '5%'
 	}
 })
 
