@@ -4,18 +4,25 @@
 	<title>simple blog</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<body>
+<body onload = "">
+
+<nav>
+	<a id = "home">home</a>
+	<a id = "aboutme">aboutme</a>
+	<a id = "random">random</a>
+</nav>
 
 <section class = "header">
 	<h3 class = "title">Blog Title</h3>
 	<p>An assignment for Web Development some more filler text to make it look nice</p>
 	<hr>
-	<h3>New Post</h3>
+	<h3 id = "newpostheader">New Post</h3>
+	<br>
 	<input type = "text" id = "input" placeholder = "Title"></input>
 	<br>
 	<input type = "text" id = "subinput" placeholder = "Content"></input>
 	<br>
-	<button class = "button" onclick = "createSection()">Post</button>
+	<button id = "postbutton" class = "button" onclick = "createSection()">Post</button>
 </section>
 
 <section class = "container"  id = "post">
@@ -28,25 +35,23 @@
 		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	</div>
+	<div class = "aboutMe">
+		<p>I am a senior at Palo Alto High School.</p>
+	</div>
+	<div class = "random">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
 </section>
 
 </body>
 
 <script type="text/javascript">
-	idArray = ["0"]
-	function createSection() {
-		var div = document.getElementById('post');
-		let input = document.getElementById('input');
-		let subtitle = document.getElementById('subinput');
-		div.innerHTML += '<div class = "blogPost"><h3>' + input.value + '</h3><p>' + subtitle.value + '</p><br><button class = "button" onclick = "deleteSection(this)" id = "' + idArray.length + '">Delete</button></div>';
-	}
-	function deleteSection(sender) {
-		console.log(idArray)
-		idArray.splice(idArray.indexOf(sender.getAttribute('id')), 1)
-		console.log(sender.parentNode)
-		sender.parentNode.parentNode.removeChild(sender.parentNode)
-        console.log(sender.getAttribute('id'));
-	}
 </script>
+<script src = "app.js"></script>
 
 </html>
