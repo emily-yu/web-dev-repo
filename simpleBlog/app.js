@@ -77,7 +77,7 @@ random.addEventListener("click", function() {
 	console.log("asdfadsf")
 
 	for (let element of postElements) {
-		element.style.visibility = "none"
+		element.style.display = "none"
 	}
 	for (let element of aboutMeElements) {
 		element.style.display = "none"
