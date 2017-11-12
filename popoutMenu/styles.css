@@ -1,0 +1,50 @@
+body {
+	font-family: sans-serif;
+	margin-left: 0;
+	margin-bottom: 0;
+	margin-top: 13px;
+	margin-bottom: 13px;
+}
+section {
+	background: black;
+    width: 250px;
+    margin-left: -250px;
+}
+section > a {
+	text-decoration: none;
+}
+section > a > p {
+	color: #8c8a78;
+	padding: 10px;
+    margin-bottom: -14px;
+    margin-top: -14px;
+	transition:all .35s;
+}
+section > a > p:hover {
+	color: white;
+}
+.open {
+	position: absolute;
+    right: 37px;
+    top: 11px;
+    background-color: black;
+        margin-top: -44px;
+    margin-right: -14px;
+    padding: 30px 10px 0px 10px;
+}
+.open > p {
+	color: white;
+}
+.hide {
+	position: absolute;
+    right: 100px;
+    top: 2px;
+    background-color: black;
+    margin-top: -5px;
+    width: 47px;
+    margin-right: -10px;
+    text-align: center;
+}
+.hide > p {
+	color: white;
+}
