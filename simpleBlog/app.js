@@ -1,5 +1,5 @@
 
-let postElements = [document.getElementById("newpostheader"), document.getElementById("input"), document.getElementById("subinput"), document.getElementById("postbutton")]
+let postElements = [document.getElementById("newpostheader"), document.getElementById("input"), document.getElementById("subinput"), document.getElementById("postButton")]
 let aboutMeElements = []
 let randomElements = []
 function refreshPosts() {
@@ -93,7 +93,7 @@ function createSection() {
 	var div = document.getElementById('post');
 	let input = document.getElementById('input');
 	let subtitle = document.getElementById('subinput');
-	div.innerHTML += '<div class = "blogPost"><h3>' + input.value + '</h3><p>' + subtitle.value + '</p><br><button class = "button" onclick = "deleteSection(this)" id = "' + idArray.length + '">Delete</button></div>';
+	div.innerHTML += '<div class = "blogPost" style = "	margin: 5%;display: block"><h3>' + input.value + '</h3><p>' + subtitle.value + '</p><br><div onclick = "deleteSection(this)" class = "deleteButton" id = "' + idArray.length + '"><p class = "buttonText">DELETE</p></div></div>';
 	postElements.push(div)
 }
 function deleteSection(sender) {

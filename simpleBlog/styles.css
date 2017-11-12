@@ -2,11 +2,28 @@ body {
 	font-family: sans-serif;
 	margin: 0;
 }
+.entry {
+	/*margin: 0 auto !important;*/
+	height: 100%;
+    width: 400px;
+    margin: 0% !important;
+    /*height: 200px;*/
+    background-color: #f9f8f4;
+    grid-column: 3 / auto;
+}
+.posts {
+	    grid-area: 1;
+	        margin-top: -27px;
+}
 .blogPost {
-	padding: 5%;
+	padding: 3%;
+	display: block
+}
+.sideBar {
+	padding: 5% !important;
 }
 .header {
-	background-color: rgba(58, 97, 120, 0.4);
+	background-color: black;
 	text-align: center;
 	padding: 5%;
 }
@@ -16,7 +33,62 @@ body {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	margin-top: 10px;
+	width: 90%;
 }
 .title {
 	font-size: 25px;
+	padding-top: 50px;
+	color: white;
+}
+.subtitle {
+	color: white;
+}
+nav {
+	padding: 25px;
+	background-color: black;
+	/*margin-bottom: 25px;*/
+}
+nav > a{
+	/*background-color: rgba(58, 97, 120, 0.4);*/
+	padding: 25px;
+	transition:all .35s;
+	margin: 0;
+	color: #67675b;
+	font-weight: bold;
+}
+nav > a:hover {
+	/*background-color: #aebbc4;*/
+	color: white;
+}
+.deleteButton {
+	height: 40px;
+	/*width: 100px;*/
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+}
+.buttonText {
+	padding-top: 11px
+}
+input, textarea {
+    width: 86%;
+        border: 1px gray solid;
+    border-radius: 2px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+.container {
+    grid-template-rows: 1fr;
+    grid-template-columns: 3fr 1fr;
+    display: grid;
+}
+.aboutMe {
+	    margin-top: 18px !important;
+    grid-area: 2;
+}
+.random {
+	    margin-top: 18px !important;
+	    grid-area: 2;
 }

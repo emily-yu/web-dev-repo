@@ -6,26 +6,25 @@
 </head>
 <body onload = "">
 
-<nav>
-	<a id = "home">home</a>
-	<a id = "aboutme">aboutme</a>
-	<a id = "random">random</a>
-</nav>
-
 <section class = "header" id = "header">
 	<h3 class = "title">Blog Title</h3>
-	<p>An assignment for Web Development some more filler text to make it look nice</p>
-	<hr>
-	<h3 id = "newpostheader">New Post</h3>
-	<br>
-	<input type = "text" id = "input" placeholder = "Title"></input>
-	<br>
-	<input type = "text" id = "subinput" placeholder = "Content"></input>
-	<br>
-	<button id = "postbutton" class = "button" onclick = "createSection()">Post</button>
+	<p class = "subtitle">An assignment for Web Development some more filler text to make it look nice</p>
 </section>
 
-<section class = "container"  id = "post">
+<nav>
+	<a id = "home">Home</a>
+	<a id = "aboutme">About Me</a>
+	<a id = "random">Random</a>
+</nav>
+
+<section class = "container">
+	<div class = "entry blogPost sideBar">
+		<h3 id = "newpostheader">New Post</h3>
+		<input type = "text" id = "input" placeholder = "Title"></input>
+		<textarea type = "text" id = "subinput" placeholder = "Content"></textarea>
+		<div onclick = "createSection()" class = "deleteButton" id = "postButton"><p class = "buttonText">POST</p></div>
+	</div>
+	<div class = "posts" id = "post">
 	<div class = "blogPost">
 		<h3>Here's a nice header.</h3>
 		<p>And some nice content! Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -35,10 +34,13 @@
 		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	</div>
+	</div>
 	<div class = "aboutMe">
+		<h3>Here's a nice header.</h3>
 		<p>I am a senior at Palo Alto High School.</p>
 	</div>
 	<div class = "random">
+		<h3>Here's a nice header.</h3>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
