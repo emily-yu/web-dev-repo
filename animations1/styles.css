@@ -1,0 +1,79 @@
+.updown {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    animation: updown 5s infinite;
+}
+@keyframes updown {
+    0%   {top: 0px;}
+    25%  {top: 200px;}
+    75%  {top: 50px}
+    100% {top: 100px;}
+}
+
+.diag-change-color {
+    width: 100px;
+    height: 100px;
+    left: 250px;
+    background: green;
+    position: relative;
+    animation: diag-change-color 5s infinite;
+}
+@keyframes diag-change-color {
+    0%   {
+        top: 0px;
+        left: 0px;
+        background: green;
+    }
+    50% {
+        top: 150px;
+        left: 300px;
+        background: black;
+    }
+    100% {
+        top: 0px;
+        left: 0px;
+        background: black;
+    }
+}
+
+.double-width {
+    width: 100px;
+    height: 100px;
+    left: 400px;
+    background: blue;
+    position: relative;
+    animation: double-width 5s infinite;
+}
+@keyframes double-width {
+    0%   {
+        width: 100px;
+        height: 100px;
+    }
+    50% {
+        width: 200px;
+        height: 200px;
+    }
+    100% {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.random {
+    width: 100px;
+    height: 100px;
+    left: 550px;
+    background: purple;
+    position: relative;
+    animation: random 5s infinite;
+}
+@keyframes random {
+    0%   {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
