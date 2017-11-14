@@ -12,3 +12,26 @@ function getRandomColor() {
 	}
 	return color;
 }
+
+let click = true;
+function addClass(classs, id) {
+	if (id === 'updown' && !(click)) {
+		console.log("asdf")
+		click = !(click)
+		document.getElementById(id).classList = ' downup'
+	}
+	else if (id === 'updown') {
+		console.log("ASdfasdfas")
+		document.getElementById(id).classList = classs
+		click = !(click)
+	}
+	else if (id === 'diag-change-color') {
+		document.getElementById(id).classList = classs
+		setTimeout(function(){
+        	document.getElementById(id).classList.remove('diag-change-color')
+    	}, 5000);
+	}
+	else {
+		document.getElementById(id).classList = classs
+	}
+}

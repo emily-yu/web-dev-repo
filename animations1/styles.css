@@ -1,24 +1,36 @@
-.updown {
+#updown {
     width: 100px;
     height: 100px;
     background: red;
     position: relative;
-    animation: updown 5s infinite;
+}
+.updown {
+    animation: updown 1s;
+    animation-fill-mode: forwards;
 }
 @keyframes updown {
     0%   {top: 0px;}
-    25%  {top: 200px;}
-    75%  {top: 50px}
-    100% {top: 100px;}
+    100% {top: 300px;}
+}
+.downup {
+    animation: downup 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes downup {
+    0%   {top: 300px;}
+    100% {top: 0px;}
 }
 
-.diag-change-color {
+#diag-change-color {
     width: 100px;
     height: 100px;
     left: 250px;
     background: green;
     position: relative;
-    animation: diag-change-color 5s infinite;
+}
+.diag-change-color {
+    animation: diag-change-color 5s;
+    animation-fill-mode: forwards;
 }
 @keyframes diag-change-color {
     0%   {
@@ -38,7 +50,7 @@
     }
 }
 
-.double-width {
+#double-width {
     width: 100px;
     height: 100px;
     left: 400px;
@@ -61,7 +73,7 @@
     }
 }
 
-.random {
+#random {
     width: 100px;
     height: 100px;
     left: 550px;
