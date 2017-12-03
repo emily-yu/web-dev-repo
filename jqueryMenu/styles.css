@@ -1,0 +1,31 @@
+body {
+	margin: 0
+}
+nav {
+	background-color: blue;
+	width: 200px;
+	transition: all .35s;
+}
+p {
+	transition: all .35s;
+}
+#navbar > p {
+	color: white;
+	padding: 10px;
+	transition: all .35s;
+}
+#navbar > p:hover {
+	color: green;
+}
+
+.show {
+	margin-left: -400px;
+}
+
+.moveLeft {
+	margin-left: 400px;
+}
+
+.moveDown {
+	margin-top: 400px;
+}
