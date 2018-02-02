@@ -10,10 +10,10 @@ const getWeather = (lat, long, callback) => {
       const summary_hourly = body.hourly.summary
       const daily_summary = body.daily.summary
       if (temperature !== apparentTemperature) {
-        console.log("temperature is " + temperature + ", apparent temperature is " + apparentTemperature)
+        console.log("\u{1F4A9} \u{1F4A9} \u{1F4A9} \u{1F4A9} temperature is " + temperature + ", apparent temperature is " + apparentTemperature)
       }
       else if (temperature === apparentTemperature) {
-        console.log("temperature is same as apparentTemperature")
+        console.log(" temperature is same as apparentTemperature")
       }
       else {
         console.log("unable to fetch")
