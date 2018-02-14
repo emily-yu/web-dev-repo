@@ -18,8 +18,8 @@
 	</nav>
 
 	<section class = "header">
-		<h1>{{title}}</h1>
-		<h4>Current Temperature: {{temp}}</h4>
+		<h1 id = "city">{{title}}</h1>
+		<h4 id = "current_temperature">Current Temperature:</h4>
 	</section>
 
 	<section class = "main">
@@ -44,4 +44,15 @@
 	</footer>
 
 </body>
+
+<script src = './weather/weather.js'></script>
+<script src = './geocode/geocode.js'></script>
+
+<script>
+let string = document.getElementById("city").innerHTML
+  geocodeAddress(string, (errorMessage, results) => {
+	document.getElementById("current_temperature").innerHTML = "Current Temperature: " + results
+  });
+</script>
+
 </html>
