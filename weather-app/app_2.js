@@ -2,6 +2,7 @@ const request = require('request');
 const yargs= require('yargs');
 const geocode = require('./geocode.js')
 const weather = require('./weather.js')
+const axios = require('axios')
 
 const argv = yargs
   .options({
