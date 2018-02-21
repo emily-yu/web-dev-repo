@@ -15,18 +15,8 @@ hbs.registerPartials(path.join(__dirname, "views"));
 hbs.registerHelper('yell', (val) => {
 	console.log(val)
 })
-hbs.registerHelper('getTemp', (val) => {
-  console.log("VAL" + val)
-  geocode.geocodeAddress(val, (errorMessage, results) => {
-    if (errorMessage) {
-      console.log(errorMessage);
-    } else {
-      weather.getWeather(results.lat, results.long, (errorMessage, weatherResults) => {
-        console.log(weatherResults)
-        return weatherResults;
-      })
-    }
-  });
+hbs.registerHelper('year', () => {
+  return (new Date()).getFullYear()
 })
 
 const getTemp = function(val, callback) {
