@@ -51,7 +51,9 @@
 <script>
 let string = document.getElementById("city").innerHTML
   geocodeAddress(string, (errorMessage, results) => {
-	document.getElementById("current_temperature").innerHTML = "Current Temperature: " + results
+  	getWeather(results.lat, results.long, (results) => {
+		document.getElementById("current_temperature").innerHTML = "Current Temperature: " + results
+  	})
   });
 </script>
 
