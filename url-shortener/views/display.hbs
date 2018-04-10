@@ -1,0 +1,19 @@
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <title>Display</title>
+</head>
+
+<body>
+
+<a href = '/urls/new'>new url</a>
+
+{{#each data as |url|}}
+	<li>
+		<a href = {{url.originalUrl}}>{{url.shortenedUrl}}</a>
+	</li>
+{{/each}}
+
+</body>
+
+</html>
