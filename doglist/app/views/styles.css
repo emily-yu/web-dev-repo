@@ -1,0 +1,24 @@
+img {
+	width: 30%;
+}
+.button {
+	padding: 10px;
+    text-decoration: none;
+    background-color: blue;
+    border-radius: 10px;
+    color: white;
+    transition: all .35s;
+}
+.button:hover {
+	background-color: steelblue;
+	color: white;
+}
+h1 {
+	text-align: center;
+}
+body {
+	font-family: 'Roboto', sans-serif;
+}
+p,a {
+	line-height: 1px;
+}

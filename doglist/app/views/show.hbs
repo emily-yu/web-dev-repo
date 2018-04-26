@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<body>
+
+<a href = '/'>Home</a>
+
+{{data}}
+
+<h1>Add/Update Doggo</h1>
+
+<div>
+	<p>Name</p>
+	<input id = 'name' type = 'text' name = 'name' placeholder = {{name}}>
+</div>
+
+<div>
+	<p>Age</p>
+	<input id = 'age' type = 'text' name = 'age' placeholder = {{age}}>
+</div>
+
+<div>
+	<p>Descipriotn</p>
+	<input id = 'desc' type = 'text' name = 'description' placeholder = {{description}}>
+</div>
+
+<div>
+	<p>ImageURL</p>
+	<input id = 'image' type = 'text' name = 'image' placeholder = {{image}}>
+</div>
+
+<div>
+	<p>Personaltiy Type</p>
+	<input id = 'personality' type = 'text' name = '' placeholder = {{personality}}>
+</div>
+
+<button onclick = 'save()'>save</button>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+function save() {
+	const params = {
+		name: $('#name')[0].value || $('#name')[0].placeholder,
+		age: $('#age')[0].value || null,
+		description: $('#desc')[0].value || null,
+		image: $('#image')[0].value || null, 
+		personality: $('#personality')[0].value || null
+	}
+	var url = new URL('http://localhost:5000/dogs/save?')
+	var isChanged = false
+	for (let param in params) {
+		console.log(param, params[param])
+		if (params[param]) {
+			console.log('exists')
+			url.searchParams.append(param, params[param])
+			isChanged = true
+		}
+	}
+	if (isChanged) {
+		window.location = url
+	}
+	else {
+		window.location = 'http://localhost:5000/dogs'
+	}
+}
+</script>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<body>
+
+<a href = '/dogs'>Home</a>
+
+<div>
+	<img id = 'image' style = 'height: 200px' src = {{response.image}}>
+	<div>
+		<p id = 'name'>{{response.name}}</p>
+		<p id = 'age'>{{response.age}}</p>
+	</div>
+	<p id = 'description'>{{response.description}}</p>
+	<p id = 'personality'>{{response.personality}}</p>
+</div>
+
+<a onclick = 'delet()'>delete</a>
+<a onclick = 'update_redir()'>update</a>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+function delet() {
+	window.location = new URL('http://localhost:5000/dogs/remove/' + $('#name')[0].innerHTML)
+}
+function update_redir() {
+	const params = {
+		name: $('#name')[0].innerHTML || null,
+		age: $('#age')[0].innerHTML || null,
+		description: $('#description')[0].innerHTML || null,
+		image: $('#image')[0].src || null, 
+		personality: $('#personality')[0].innerHTML || null
+	}
+	console.log(params)
+	var url = new URL('http://localhost:5000/dogs/new?')
+	for (let param in params) {
+		console.log(param, params[param])
+		if (params[param]) {
+			url.searchParams.append(param, params[param])
+		}
+	}
+	window.location = url
+}
+</script>
+
+</html>

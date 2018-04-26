@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<body>
+
+<h1>Doglist</h1>
+<a class = 'button' href = '/dogs/new'>create</a>
+
+{{#each response as |url|}}
+	<div style = 'margin-top: 100px'>
+		<div>
+			<a href = '/dogs/{{url.name}}'>{{url.name}}</a>
+			<p>{{url.age}}</p>
+		</div>
+		<img src = {{url.image}}>
+		<p>{{url.description}}</p>
+		<p>{{url.personality}}</p>
+	</div>
+{{/each}}
+
+</body>
+
+</html>
