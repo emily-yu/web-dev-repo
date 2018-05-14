@@ -4,6 +4,7 @@ const hbs = require('hbs');
 const _ = require('lodash');
 const path = require('path');
 const methodOverride = require('method-override');
+const fileUpload = require('express-fileupload');
 
 const mongoose = require('mongoose');
 
@@ -29,6 +30,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, '../app/views')));
 app.use(methodOverride('_method'));
+// default options
+app.use(fileUpload());
 
 app.get('/', (req, res) => {
   res.redirect('/dogs');
@@ -47,14 +50,15 @@ app.get('/dogs', (req, res) => {
 	// res.render('index.hbs')
 })
 
-app.get('/dogs/new', (req, res) => {
+app.get('/dogs/new/:hidden', (req, res) => {
 	console.log('/dogs/new')
 	res.render('show.hbs', {
 		name: req.query.name || '',
 		age: req.query.age || '',
 		description: req.query.description || '',
 		image: req.query.image || '',
-		personality: req.query.personality || ''
+		personality: req.query.personality || '',
+		hidden: req.params.hidden
 	})
 })
 
@@ -86,23 +90,22 @@ app.get('/dogs/remove/:name', (req, res) => {
 	});
 })
 
-app.post('/dogs/new', (req, res) => {
-	// res.send('POST /')
-	console.log('post: /dogs/new')
-	const dog = new Dog({
-		name: 'asdf',
-		age: 2,
-		description: 'adsf',
-		image: 'https://www.dog-on-it-parks.com/images/z7294-Beagle-copy.jpg', 
-		personality: 'bad'
-	})
-	dog.save()
-	.then(dog =>{
-		res.send(dog)
-	}).catch(e => {
-		res.status(400).send()
-	})
-})
+app.post('/upload', function(req, res) {
+  if (!req.files)
+    return res.status(400).send('No files were uploaded.');
+ 
+  // The name of the input field (i.e. "sampleFile") is used to retrieve the uploaded file
+  let sampleFile = req.files.sampleFile;
+ 
+ 	console.log(path.join(__dirname, '../app/views/images/' + req.body.name + '.jpg'))
+  // Use the mv() method to place the file somewhere on your server
+  sampleFile.mv(path.join(__dirname, '../app/views/images/' + req.body.name + '.jpg'), function(err) {
+    if (err)
+      return res.status(500).send(err);
+ 
+    res.redirect('/')
+  });
+});
 
 app.listen(port, () => {
 	console.log('listening on port' + port)

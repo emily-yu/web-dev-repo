@@ -31,7 +31,21 @@
 
 <div>
 	<p>ImageURL</p>
-	<input id = 'image' type = 'text' name = 'image' placeholder = {{image}}>
+	<p>it just uploads which is the only requirement</p>
+	    <form ref='uploadForm' 
+      id='uploadForm' 
+      action='http://localhost:5000/upload' 
+      method='post' 
+      encType="multipart/form-data"
+      style = 'visibility: {{hidden}}'>
+        <input type="file" name="sampleFile" /><br>
+        Name<input id = 'name' type = 'text' name = 'name' placeholder = {{name}}><br>
+        Age<input id = 'age' type = 'text' name = 'age' placeholder = {{age}}><br>
+        Description<input id = 'desc' type = 'text' name = 'description' placeholder = {{description}}><br>
+        Image<input id = 'image' type = 'text' name = 'image' placeholder = {{image}}><br>
+        Personality<input id = 'personality' type = 'text' name = '' placeholder = {{personality}}><br>
+        <input type='submit' value='Upload!' />
+    </form>  
 </div>
 
 <div>

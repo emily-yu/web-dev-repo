@@ -39,7 +39,7 @@ function update_redir() {
 		personality: $('#personality')[0].innerHTML || null
 	}
 	console.log(params)
-	var url = new URL('http://localhost:5000/dogs/new?')
+	var url = new URL('http://localhost:5000/dogs/new/visible?')
 	for (let param in params) {
 		console.log(param, params[param])
 		if (params[param]) {
