@@ -1,7 +1,17 @@
+// Citations
+// https://github.com/Createdd/authenticationIntro
+
 // SCHEMA
 const mongoose = require('mongoose')
-mongoose.Promise = global.Promise
-mongoose.connect('mongodb://localhost:27017/equipment')
+var session = require('express-session');
+var MongoStore = require('connect-mongo')(session);
+
+//connect to MongoDB
+mongoose.connect('mongodb://localhost:27017/equipment');
+var db = mongoose.connection;
+
+// mongoose.Promise = global.Promise
+// mongoose.connect('mongodb://localhost:27017/equipment')
 const hardwareSchema = mongoose.Schema({
 	user: {
 		type: String,
@@ -14,6 +24,8 @@ const hardwareSchema = mongoose.Schema({
 })
 const Url = mongoose.model('hardware', hardwareSchema);
 
+var User = require('./models/User.js');
+
 // EXPRESS
 const express = require('express')
 const hbs = require('hbs')
@@ -24,11 +36,20 @@ const bodyParser = require('body-parser')
 const app = express();
 const port = process.env.port || 3000
 
-app.use(bodyParser.json())
+app.use(session({
+  secret: 'work hard',
+  resave: true,
+  saveUninitialized: false,
+  store: new MongoStore({
+    mongooseConnection: db
+  })
+}));
 
-app.get('/', (req, res) => {
-	res.render('index.hbs')
-})
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+var routes = require('./routes/router.js');
+app.use('/', routes);
 
 app.listen(port, () => {
 	console.log('Listening on port' + port)
