@@ -3,28 +3,15 @@
 
 // SCHEMA
 const mongoose = require('mongoose')
-var session = require('express-session');
-var MongoStore = require('connect-mongo')(session);
+const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
 
 //connect to MongoDB
 mongoose.connect('mongodb://localhost:27017/equipment');
-var db = mongoose.connection;
+const db = mongoose.connection;
 
-// mongoose.Promise = global.Promise
-// mongoose.connect('mongodb://localhost:27017/equipment')
-const hardwareSchema = mongoose.Schema({
-	user: {
-		type: String,
-		default: null
-	},
-	isOut: {
-		type: Boolean,
-		default: false
-	}
-})
-const Url = mongoose.model('hardware', hardwareSchema);
-
-var User = require('./models/User.js');
+const Url = require('./models/equipment.js');
+const User = require('./models/User.js');
 
 // EXPRESS
 const express = require('express')
@@ -48,7 +35,7 @@ app.use(session({
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-var routes = require('./routes/router.js');
+const routes = require('./routes/router.js');
 app.use('/', routes);
 
 app.listen(port, () => {
