@@ -74,7 +74,8 @@ router.get('/profile', function (req, res, next) {
           // return res.send('<h1>Name: </h1>' + user.username + '<h2>Mail: </h2>' + user.email + '<br><a type="button" href="/logout">Logout</a>')
           return res.render(path.join(__dirname, '../views/home.hbs'), {
             username: user.username,
-            email: user.email
+            email: user.email,
+            equipment: user.equipment
           })
         }
       }
@@ -112,8 +113,27 @@ router.post('/addItem/:username', (req, res) => {
         if (err) throw err;
         console.log(managerparent);
     }
-);
+  );
+})
 
+router.get('/items/:omit', (req, res) => {
+  // false means no omit
+  if (req.params.omit !== 'false') {
+    User.find( { username: { $ne: req.params.omit } } )
+    .then(data => {
+      res.send({data});
+    }, e => {
+      res.status(404).send(e)
+    })
+  }
+  else {
+    User.find()
+    .then(data => {
+      res.send({data});
+    }, e => {
+      res.status(404).send(e)
+    })
+  }
 })
 
 module.exports = router;

@@ -7,6 +7,18 @@
 
 <p>Welcome, {{username}}</p>
 <p>{{email}}</p>
+<p>{{equipment}}</p>
+
+<h3>My Items</h3>
+{{#each equipment as |url|}}
+	<li>
+		<p>{{url.itemName}}</p>
+		<p>{{url.isOut}}</p>
+	</li>
+{{/each}}
+
+<h3>Equipment Available</h3>
+
 
 </body>
 </html>
