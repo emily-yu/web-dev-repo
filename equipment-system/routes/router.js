@@ -144,7 +144,7 @@ router.get('/items/:omit', (req, res) => {
   }
 })
 
-router.post('/checkout/:id/:value', (req, res) => {
+router.get('/checkout/:id/:value', (req, res) => {
   User.findOneAndUpdate({
     equipment: {
       $elemMatch: {
@@ -154,7 +154,7 @@ router.post('/checkout/:id/:value', (req, res) => {
   }, {$set: {
     'equipment.$.isOut': req.params.value
   }}, function (err, place) {
-    res.send(place);
+    res.redirect('/profile')
   });
 })
 
