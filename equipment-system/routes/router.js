@@ -121,7 +121,11 @@ router.get('/items/:omit', (req, res) => {
   if (req.params.omit !== 'false') {
     User.find( { username: { $ne: req.params.omit } } )
     .then(data => {
-      res.send({data});
+      let res_data = []
+      for (user of data) {
+        res_data = res_data.concat(user.equipment)
+      }
+      console.log(res_data)
     }, e => {
       res.status(404).send(e)
     })
@@ -129,7 +133,11 @@ router.get('/items/:omit', (req, res) => {
   else {
     User.find()
     .then(data => {
-      res.send({data});
+      let res_data = []
+      for (user of data) {
+        res_data = res_data.concat(user.equipment)
+      }
+      console.log(res_data)
     }, e => {
       res.status(404).send(e)
     })
