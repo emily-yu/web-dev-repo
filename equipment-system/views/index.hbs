@@ -60,6 +60,7 @@ fetch('http://localhost:3000/items/false')
 	let equipmentList = document.getElementById('equipment')
 	for (user of response.res_data) {
 		equipmentList.innerHTML += '<tr>\
+										<td>' + user._id + '</td>\
 										<td>' + user.itemName + '</td>\
 										<td>' + user.isOut + '</td>\
 									</tr>'

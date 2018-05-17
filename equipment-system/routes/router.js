@@ -144,4 +144,18 @@ router.get('/items/:omit', (req, res) => {
   }
 })
 
+router.post('/checkout/:id/:value', (req, res) => {
+  User.findOneAndUpdate({
+    equipment: {
+      $elemMatch: {
+        _id: req.params.id
+      }
+    }
+  }, {$set: {
+    'equipment.$.isOut': req.params.value
+  }}, function (err, place) {
+    res.send(place);
+  });
+})
+
 module.exports = router;
