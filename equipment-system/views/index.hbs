@@ -10,7 +10,11 @@
 </head>
 <body>
 
-<h1>authentication</h1>
+<h3>Equipment Available</h3>
+<table id = 'equipment'>
+</table>
+
+<h3>authenticate to borrow or add equipment</h3>
 <!-- main -->
 <div class="main">
 	<div class="w3">
@@ -45,6 +49,23 @@
 	</div>
 	<div class="clear"></div>
 </div>
+
+<script>
+fetch('http://localhost:3000/items/false')
+.then((response) => {
+	return response.json()
+})
+.then((response) => {
+	console.log(response)
+	let equipmentList = document.getElementById('equipment')
+	for (user of response.res_data) {
+		equipmentList.innerHTML += '<tr>\
+										<td>' + user.itemName + '</td>\
+										<td>' + user.isOut + '</td>\
+									</tr>'
+	}
+})
+</script>
 
 </body>
 </html>

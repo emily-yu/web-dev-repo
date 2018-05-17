@@ -18,10 +18,26 @@
 {{/each}}
 
 <h3>Equipment Available</h3>
+<table id = 'equipment'>
+</table>
 
 </body>
 
 <script>
+fetch('http://localhost:3000/items/{{username}}')
+.then((response) => {
+	return response.json()
+})
+.then((response) => {
+	console.log(response)
+	let equipmentList = document.getElementById('equipment')
+	for (user of response.res_data) {
+		equipmentList.innerHTML += '<tr>\
+										<td>' + user.itemName + '</td>\
+										<td>' + user.isOut + '</td>\
+									</tr>'
+	}
+})
 </script>
 
 </html>

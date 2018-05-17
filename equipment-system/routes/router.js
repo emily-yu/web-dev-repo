@@ -125,7 +125,7 @@ router.get('/items/:omit', (req, res) => {
       for (user of data) {
         res_data = res_data.concat(user.equipment)
       }
-      console.log(res_data)
+      res.send({res_data})
     }, e => {
       res.status(404).send(e)
     })
@@ -137,7 +137,7 @@ router.get('/items/:omit', (req, res) => {
       for (user of data) {
         res_data = res_data.concat(user.equipment)
       }
-      console.log(res_data)
+      res.send({res_data})
     }, e => {
       res.status(404).send(e)
     })
