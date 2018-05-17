@@ -95,4 +95,25 @@ router.get('/logout', function (req, res, next) {
   }
 });
 
+router.post('/addItem/:username', (req, res) => {
+  User.findOneAndUpdate({username: req.params.username}, { 
+      "$push": { 
+        "equipment": {
+          itemName: req.body.itemName,
+          isOut: false
+        }
+      } 
+    },
+    {
+      "new": true,
+      "upsert": true
+    },
+    function (err, managerparent) {
+        if (err) throw err;
+        console.log(managerparent);
+    }
+);
+
+})
+
 module.exports = router;
