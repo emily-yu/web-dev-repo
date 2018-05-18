@@ -16,6 +16,17 @@ body {
 .inventory {
 	padding: 20px;
 }
+.inventory > form > input {
+    background-color: black;
+    color: white;
+    border-color: lime;
+    margin-top: 20px;
+}
+.inventory > form > button {
+	background-color: black;
+    color: lime;
+    border-color: lime;
+}
 
 a {
 	text-decoration: none;

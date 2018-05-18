@@ -27,6 +27,10 @@
 		</tr>
 	{{/each}}
 	</table>
+	<form action = 'https://frozen-cove-38059.herokuapp.com/addItem/{{username}}' method = 'POST'>
+		<input type = 'text' placeholder = 'item name' name = 'itemName'><br>
+		<button type = 'submit'>submit</button>
+	</form>
 </section>
 
 <section class = 'equipment'>
@@ -38,7 +42,7 @@
 </body>
 
 <script>
-fetch('http://localhost:3000/items/{{username}}')
+fetch('https://frozen-cove-38059.herokuapp.com/items/{{username}}')
 .then((response) => {
 	return response.json()
 })
