@@ -21,7 +21,7 @@ const path = require('path')
 hbs.registerPartials(path.join(__dirname, "views"));
 const bodyParser = require('body-parser')
 const app = express();
-const port = process.env.port || 3000
+const port = process.env.PORT || 3000
 
 app.use(session({
   secret: 'work hard',
