@@ -2,26 +2,38 @@
 <html>
 <head>
 	<title>home</title>
+	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
 
-<p>Welcome, {{username}}</p>
-<p>{{email}}</p>
-<p>{{equipment}}</p>
+<nav>
+	<a href = '/logout'>logout</a>
+</nav>
 
-<h3>My Items</h3>
-<table>
-{{#each equipment as |url|}}
-	<tr>
-		<td>{{url.itemName}}</td>
-		<td>{{url.isOut}}</td>
-	</tr>
-{{/each}}
-</table>
+<section class = 'welcome'>
+	<p>Welcome, {{username}}!</p>
+	<p>{{email}}</p>
+	<p>{{equipment}}</p>
+</section>
 
-<h3>Equipment Available</h3>
-<table id = 'equipment'>
-</table>
+<section class = 'inventory'>
+	<h3>My Items</h3>
+	<table>
+	{{#each equipment as |url|}}
+		<tr>
+			<td>{{url.itemName}}</td>
+			<td>{{url.isOut}}</td>
+		</tr>
+	{{/each}}
+	</table>
+</section>
+
+<section class = 'equipment'>
+	<h3>Equipment Available</h3>
+	<table id = 'equipment'>
+	</table>
+</section>
 
 </body>
 

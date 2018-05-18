@@ -101,7 +101,8 @@ router.post('/addItem/:username', (req, res) => {
       "$push": { 
         "equipment": {
           itemName: req.body.itemName,
-          isOut: false
+          isOut: false,
+          user: 'null'
         }
       } 
     },

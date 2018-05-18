@@ -34,6 +34,7 @@ app.use(session({
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, "views")));
 
 const routes = require('./routes/router.js');
 app.use('/', routes);

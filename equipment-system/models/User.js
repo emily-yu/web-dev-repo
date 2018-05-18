@@ -24,7 +24,8 @@ var UserSchema = new mongoose.Schema({
 	},
 	equipment : [{
 	    itemName : String,
-	    isOut   : Boolean
+	    isOut   : Boolean,
+      user : String
 	}]
 });
 
