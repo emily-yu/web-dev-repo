@@ -7,7 +7,7 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 
 //connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/equipment');
+mongoose.connect('mongodb://asdf:asdf@ds123499.mlab.com:23499/equipment');
 const db = mongoose.connection;
 
 const Url = require('./models/equipment.js');
